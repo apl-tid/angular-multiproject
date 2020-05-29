@@ -1,0 +1,23 @@
+a:link, a:visited {
+  color: white;
+  padding: 2px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:link.view1, a:visited.view1 {
+  background-color: blue;
+}
+
+a:hover.view1, a:active.view1 {
+  background-color:dodgerblue;
+}
+
+a:link.view2, a:visited.view2 {
+  background-color:darkblue;
+}
+
+a:hover.view2, a:active.view2 {
+  background-color:dodgerblue;
+}

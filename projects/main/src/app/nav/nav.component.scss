@@ -1,0 +1,23 @@
+a:link, a:visited {
+  color: white;
+  padding: 2px 23px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:link.app1, a:visited.app1 {
+  background-color: dodgerblue;
+}
+
+a:hover.app1, a:active.app1 {
+  background-color:deepskyblue;
+}
+
+a:link.app2, a:visited.app2 {
+  background-color:green;
+}
+
+a:hover.app2, a:active.app2 {
+  background-color:limegreen;
+}

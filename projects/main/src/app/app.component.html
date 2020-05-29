@@ -1,0 +1,7 @@
+<button (click)="commonService.message = 'Common service called from ' + title">{{title}}: call service</button>
+<p>{{commonService.message}}</p>
+<lib-common></lib-common>
+<app-nav></app-nav>
+<hr/>
+<router-outlet></router-outlet>
+
