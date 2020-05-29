@@ -1,6 +1,6 @@
 # Angular multiproject
 
-Angular supports workspaces with multiple projects. This type of development environment is suitable for enterprises that use a "monorepo" development style, with a single repository and global configuration for all Angular related projects, such as a suit of apps integrated in a SPA. A multi-project workspace also supports library development. A simple example might be a button that sends users to your company website, that would be included in all apps that your company builds.
+> Angular supports workspaces with multiple projects. This type of development environment is suitable for enterprises that use a "monorepo" development style, with a single repository and global configuration for all Angular related projects, such as a suit of apps integrated in a SPA. A multi-project workspace also supports library development. A simple example might be a button that sends users to your company website, that would be included in all apps that your company builds.
 
 This repo is an Angular multiproject example covering:
 
@@ -38,4 +38,5 @@ The example consists of a main app (in the top) that navigates and shows (in the
 ## References
 
 https://angular.io/guide/file-structure
+
 https://angular.io/guide/creating-libraries
