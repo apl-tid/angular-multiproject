@@ -7,8 +7,8 @@ This repo is an Angular multiproject example covering:
 * Creation of a SPA (`main`) comprising two independent apps (`app1` and `app2`)
 * Lazy loading of each app within the SPA
 * Running each independent app in a standalone fashion
-* Creation of a library (`common`) used by all of the previous apps
-* Using an external repository library (`external-lib`) 
+* Creation of an Angular library (`common`) used by all of the previous apps
+* Using an external repository Angular library ([`external-lib`](https://github.com/apl-tid/angular-external-lib)) 
 * Using previous libraries without publishing them to any private or public npm registry
 
 ## Install
@@ -21,7 +21,7 @@ This repo is an Angular multiproject example covering:
 
 The example consists of a main app (in the top) that navigates and shows one of the two independent apps (in the bottom). Apps share a singleton service from the common library and another one from the external library. They can be called from inside each app and  see how calls reflect on all of them. Components from the common and external libraries are also used within the apps.
 
-* To execute the SPA with automatic lib+apps code changes reloading:
+* To execute the SPA with automatic libs+apps code changes reloading:
   1. `$> npm start`
   1. Open `http://localhost:4200` in a browser
 

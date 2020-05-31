@@ -22,7 +22,8 @@
     "@angular/router": "~9.1.9",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "external-lib": "git+https://github.com/apl-tid/angular-external-lib"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.7",
