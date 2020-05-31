@@ -16,9 +16,13 @@
       "dom"
     ],
     "paths": {
-      "common": [
+      "@common": [
         "dist/common/common",
         "dist/common"
+      ],
+      "@external-lib": [
+        "dist/external-lib/external-lib",
+        "dist/external-lib"
       ],
       "@app1/*": ["projects/app1/src/app/*"],
       "@app2/*": ["projects/app2/src/app/*"]

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'lib-common',
   template: `
-    <p>Common component works!</p>
+    <p>Common lib component works!</p>
   `,
   styles: [
   ]

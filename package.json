@@ -1,14 +1,14 @@
 {
-  "name": "multiproject",
+  "name": "angular-multiproject",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng build common --watch & ng serve ${APP}",
+    "start": "ng build common --watch & ng build external-lib --watch & ng serve ${APP}",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build common"
+    "postinstall": "ng build common; ng build external-lib"
   },
   "private": true,
   "dependencies": {

@@ -1,3 +1,4 @@
-<button (click)="commonService.message = 'Common service called from ' + title">{{title}}: call service</button>
+<button (click)="callServices()">{{title}}: call services</button>
 <p>{{commonService.message}}</p>
+<p>{{externalLibService.message}}</p>
 <app-nav></app-nav>

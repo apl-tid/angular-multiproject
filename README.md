@@ -8,7 +8,8 @@ This repo is an Angular multiproject example covering:
 * Lazy loading of each app within the SPA
 * Running each independent app in a standalone fashion
 * Creation of a library (`common`) used by all of the previous apps
-* Using the library without publishing it to any private or public npm registry
+* Using an external repository library (`external-lib`) 
+* Using previous libraries without publishing them to any private or public npm registry
 
 ## Install
 
@@ -18,18 +19,18 @@ This repo is an Angular multiproject example covering:
 
 ## Usage
 
-The example consists of a main app (in the top) that navigates and shows one of the two independent apps (in the bottom). Apps share a singleton service from the common library, that can be called from inside each of them to see how it reflects in all of them. A component from the common library is also used within the apps.
+The example consists of a main app (in the top) that navigates and shows one of the two independent apps (in the bottom). Apps share a singleton service from the common library and another one from the external library. They can be called from inside each app and  see how calls reflect on all of them. Components from the common and external libraries are also used within the apps.
 
 * To execute the SPA with automatic lib+apps code changes reloading:
   1. `$> npm start`
-  2. Open `http://localhost:4200` in a browser
+  1. Open `http://localhost:4200` in a browser
 
 * To see lazy loading working:
   1. Open browser dev tools > network
-  2. Reload `http://localhost:4200` page
-  3. Check that only `main.js` and `app1-main-module.js` have been requested
-  4. Click on `App 2`
-  5. Check that `app2-main-module.js` has been requested
+  1. Reload `http://localhost:4200` page
+  1. Check that only `main.js` and `app1-main-module.js` have been requested
+  1. Click on `App 2`
+  1. Check that `app2-main-module.js` has been requested
 
 * To independently execute each app outside the SPA:
   * `$> APP=app1 npm start`
@@ -37,6 +38,5 @@ The example consists of a main app (in the top) that navigates and shows one of 
 
 ## References
 
-https://angular.io/guide/file-structure
-
-https://angular.io/guide/creating-libraries
+1. https://angular.io/guide/file-structure
+1. https://angular.io/guide/creating-libraries

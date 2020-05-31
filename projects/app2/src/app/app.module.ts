@@ -6,7 +6,8 @@ import { View2Component } from './view2/view2.component';
 import { NavComponent } from './nav/nav.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { CommonModule } from 'common';
+import { CommonModule } from '@common';
+import { ExternalLibModule } from '@external-lib';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CommonModule } from 'common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    ExternalLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

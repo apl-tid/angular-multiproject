@@ -8,7 +8,7 @@ export class CommonService {
   _message: string;
 
   constructor() {
-    this._message = "Common service";
+    this._message = "Common lib service";
   }
 
   get message(): string {
