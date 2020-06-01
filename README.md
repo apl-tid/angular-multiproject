@@ -21,6 +21,8 @@ This repository is an Angular multiproject example covering:
 
 The example consists of a main app (in the top) that navigates/shows one of the two independent apps (in the bottom). Apps share a singleton service from the common library and another one from the external library. They can be called from inside each app and see how calls reflect on all apps. Components from the common and the external libraries are also used within the apps.
 
+![spa](https://user-images.githubusercontent.com/8087480/83434787-669fdd00-a43b-11ea-83d6-fdc16af3a1f3.gif)
+
 * To execute the SPA with automatic libs+apps code changes reloading:
   1. `$> npm start`
   1. Open `http://localhost:4200` in a browser
