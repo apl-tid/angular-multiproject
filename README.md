@@ -42,13 +42,13 @@ This project structure suits the development of SPAs consisting of different app
 
 * Angular engine is only loaded once
 * Each app is loaded on demand (lazy loading)
-* Shared functionalities are easily accomplish through libraries
+* Shared functionalities are easily accomplished through libraries
 * Organizing them in subprojects enforces decoupling and cohesion
 * Being able to independently deploy and run them can be useful for testing and for product strategy changes
 * Avoids the hassle of using the NPM registry for the developed libs/apps as they are in the same workspace (it does not make sense having them in a registry because they are not intended to be shared, they are targeted to be used within this SPA)
 * The "monorepo" approach fits perfectly here as most of [these PROS](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) hold true and none of the CONS apply in the context of a SPA development
-* Several teams can work on their own subproject, organizing subprojects releases in different branches and merging into master the ones that are part of the next SPA release
-* This model still supports libs developed in external repositories. It might be convenience when having libraries developed within the company used in different products/projects. In this example, the `projects/external-lib` folder is an external GIT repo, so changes in their files are handled independently of the changes in the SPA repo
+* Different teams can work on their own subproject, organizing subprojects releases in different branches and merging into master the ones that are part of the next SPA release
+* This model still supports libs developed in external repositories. It might be convenience when having libraries developed within the company used in different products/projects. In this example, the `./projects/external-lib/` folder is an external GIT repo, so changes in their files are handled independently of the changes in the SPA repo
 
 ## References
 
