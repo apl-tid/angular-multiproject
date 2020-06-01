@@ -2,14 +2,14 @@
 
 > Angular supports workspaces with multiple projects. This type of development environment is suitable for enterprises that use a "monorepo" development style, with a single repository and global configuration for all related Angular projects, such as a suit of apps integrated in a SPA. A multi-project workspace also supports library development. A simple example might be a button that sends users to your company website, that would be included in all apps that your company builds.
 
-This repo is an Angular multiproject example covering:
+This repository is an Angular multiproject example covering:
 
 * Creation of a SPA (`main`) comprising two independent apps (`app1` and `app2`)
 * Lazy loading of each app within the SPA
-* Running each independent app in a standalone fashion
+* Running each independent app in a standalone way
 * Creation of an Angular library (`common`) used by all of the previous apps
-* Using an external repository Angular library ([`external-lib`](https://github.com/apl-tid/angular-external-lib)) 
-* Using previous libraries without publishing them to any private or public npm registry
+* Using an external repository Angular library ([`external-lib`](https://github.com/apl-tid/angular-external-lib)) like a subproject inside this workspace
+* Using previous libraries without publishing them to any private/public NPM registry
 
 ## Install
 
@@ -19,7 +19,7 @@ This repo is an Angular multiproject example covering:
 
 ## Usage
 
-The example consists of a main app (in the top) that navigates and shows one of the two independent apps (in the bottom). Apps share a singleton service from the common library and another one from the external library. They can be called from inside each app and  see how calls reflect on all of them. Components from the common and external libraries are also used within the apps.
+The example consists of a main app (in the top) that navigates/shows one of the two independent apps (in the bottom). Apps share a singleton service from the common library and another one from the external library. They can be called from inside each app and see how calls reflect on all apps. Components from the common and the external libraries are also used within the apps.
 
 * To execute the SPA with automatic libs+apps code changes reloading:
   1. `$> npm start`
@@ -36,7 +36,21 @@ The example consists of a main app (in the top) that navigates and shows one of 
   * `$> APP=app1 npm start`
   * `$> APP=app2 npm start`
 
+## Conclusions
+
+This project structure suits the development of SPAs consisting of different apps with some shared functionalies because: 
+
+* Angular engine is only loaded once
+* Each app is loaded on demand (lazy loading)
+* Shared functionalities are easily accomplish through libraries
+* Organizing them in subprojects enforces decoupling and cohesion
+* Being able to independently deploy and run them can be useful for testing and for product strategy changes
+* Avoids the hassle of using the NPM registry for the developed libs/apps as they are in the same workspace (it does not make sense having them in a registry because they are not intended to be shared, they are targeted to be used within this SPA)
+* The "monorepo" approach fits perfectly here as most of [these PROS](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) hold true and none of the CONS apply in the context of a SPA development
+* Several teams can work on their own subproject, organizing subprojects releases in different branches and merging into master the ones that are part of the next SPA release
+* This model still supports libs developed in external repositories. It might be convenience when having libraries developed within the company used in different products/projects. In this example, the `projects/external-lib` folder is an external GIT repo, so changes in their files are handled independently of the changes in the SPA repo
+
 ## References
 
-1. https://angular.io/guide/file-structure
-1. https://angular.io/guide/creating-libraries
+1. Angular workspaces: https://angular.io/guide/file-structure
+1. Creating Angular libraries: https://angular.io/guide/creating-libraries
